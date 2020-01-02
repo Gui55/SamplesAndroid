@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <EditText
+        android:id="@+id/enterNomeAnime"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:hint="Nome do Anime"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/enterProtagonista"
+        android:hint="Nome do protagonista"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/enterNomeAnime" />
+
+    <Button
+        android:id="@+id/btnCadastro"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="116dp"
+        android:layout_marginLeft="116dp"
+        android:text="Cadastrar Anime"
+        android:onClick="cadastrar"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/enterProtagonista" />
+
+    <Button
+        android:id="@+id/btnVerAnimeDaPos"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="192dp"
+        android:text="Ver anime da posição"
+        android:onClick="mostrarAnime"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/enterProtagonista" />
+
+    <EditText
+        android:id="@+id/enterSearchPos"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="132dp"
+        app:layout_constraintStart_toEndOf="@id/btnVerAnimeDaPos"
+        app:layout_constraintTop_toBottomOf="@id/btnCadastro" />
+
+    <TextView
+        android:id="@+id/animeShow"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="60dp"
+        android:textSize="20dp"
+        app:layout_constraintTop_toBottomOf="@id/btnVerAnimeDaPos"
+        tools:layout_editor_absoluteX="0dp" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
